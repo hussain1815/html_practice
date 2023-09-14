@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<style>
+    .heading_label {
+        border-radius: 0px 0px 0px 50px;
+
+    }
+
+
+
+    .tab {
+        background-color: rgb(226, 223, 223);
+        border-radius: 50px;
+
+    }
+
+    .tablinks-finish {
+        border: none;
+        border-radius: 30px;
+        background: none;
+        color: gray;
+    }
+
+    .tablink-profit {
+        border: none;
+        border-radius: 50px;
+        background-color: #000;
+        color: white;
+    }
+
+    .inprofit-label {
+        border-radius: 50px;
+        background-color: black;
+        color: rgb(184, 181, 181);
+        margin-left: 5px;
+    }
+
+    .finished-label {
+        border-radius: 50px;
+        color: rgb(110, 110, 110);
+        background-color: rgb(226, 223, 223);
+        border: 0px;
+    }
+
+
+
+    .u {
+        border-bottom: 2px dotted #000;
+        text-decoration: none;
+    }
+
+    .maindiv {
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 2px rgb(194, 190, 190);
+    }
+
+    .icon {
+        border: 1px solid grey;
+        border-radius: 80px;
+        background-color: black;
+    }
+
+    .cycle {
+        border-radius: 80px;
+        background-color: black;
+        color: gray;
+
+    }
+
+    .cycleheading {
+        color: white;
+    }
+
+    .iconlabel {
+        color: white;
+    }
+
+    .data {
+        color: rgb(197, 195, 195)
+    }
+</style>
+
+<body>
+    <div class="heading_label text-center bg-black text-bg-primary p-5">
+        <h2 class="device-label  ">Device</h2>
+
+        <div class="tab d-flex justify-content-between px-3 pt-2 pb-2">
+            <button class="tablink-profit px-4" onclick="openCity(event, 'London')">In Profit</button>
+            <button class="tablinks-finish" onclick="openCity(event, 'Paris')">Finished</button>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div id="London" class="tabcontent">
+        <div class="container">
+            <div class="maindiv d-flex justify-content-between mt-4">
+
+
+                <div class="div1">
+
+                    <div class="two-headings d-flex justify-content-between mt-4">
+                        <div class="icon ms-1 px-3 pt-1 ">
+                            <span class="iconlabel">icon</span>
+                        </div>
+                        <div class="cycle px-3 pt-1">
+                            <p><b class="cycleheading">Cycle</b> 5/38days</p>
+                        </div>
+
+                    </div>
+                    <div class="container ">
+                        <h2 class="smart-heading mt-2 me-4"><b>Smart Watch V1</b></h2>
+
+                        <div class="data d-flex justify-content-between mt-2">
+                            <div class="hourly-label">
+                                <p>Hourly Income</p>
+                            </div>
+                            <div class="price">
+                                <p>Rs150</p>
+                            </div>
+                        </div>
+                        <div class="u"></div>
+
+                        <div class="data d-flex justify-content-between">
+                            <div class="hourly-label">
+                                <p>Daily Income</p>
+                            </div>
+                            <div class="price">
+                                <p>Rs50</p>
+                            </div>
+                        </div>
+                        <div class="u"></div>
+
+                        <div class="data d-flex justify-content-between">
+                            <div class="hourly-label">
+                                <p>Earned Income</p>
+                            </div>
+                            <div class="price">
+                                <p>Rs5000</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="div2 p me-2">image</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h3>this is finished div</h3>
+    </div>
+    <!-- <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p> 
+      </div> -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
